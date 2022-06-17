@@ -1,0 +1,4 @@
+- Vite
+- React
+- PNPM
+- Styled component
