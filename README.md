@@ -9,7 +9,7 @@ Wish to experiment with the following:
 - HTML & CSS (& Sass?)
 - Styled components / emotion / [Stitches](https://stitches.dev/docs/styling)
 - Tailwind, Bootstrap
-- NextJS
+- SSR. NextJS
 - Web worker
 - Web assembly
 
@@ -19,3 +19,4 @@ In distant future:
 - Tauri
 - React native
 - ThreeJS
+- CI/CD. Travis, Jenkins
