@@ -19,4 +19,10 @@ In distant future:
 - Tauri
 - React native
 - ThreeJS
+
+In distant distant future:
+- Docker, Kubernetes
 - CI/CD. Travis, Jenkins
+- Test
+- Cloud infrastructure (AWS, Azure)
+- Database (Postgres, no-SQL, ORM)
