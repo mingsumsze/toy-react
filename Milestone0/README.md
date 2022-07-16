@@ -1,6 +1,7 @@
 Topics to cover
 - Vite
 - React
+- Formik
 - HTML & CSS
 - PNPM
 - Styled component
@@ -13,7 +14,6 @@ Resource
 - Styled component official docs
 
 ## Vite
-
 Overview
 - Use ES modules (ESM) for dev server
   - As oppose to the conventional approach of bundling on every change in source code / dependency
@@ -46,18 +46,21 @@ Build optimisations
 - See also: rollup
 
 ## PNPM
-
 - With NPM or Yarn, subdependencies are not shared. Multiple copies of common subdependencies are stored
 - Non-flat `node_modules` directory
 
-## React
+## Javascript
 
+
+## React
 - JSX expressions are compiled (by Babel or Typescript compiler. Both are transpilers that can also transpile ES6+ to older ES) into JS functions (`React.createElement()`) and evaluate to JS objects
 - React element (an UI component) is immutable
 - React component: a reusable unit. Either function or class
 - ReactDOM: virtual DOM. React implements a diff-ing algorithm that calculuates the necessary updates needed to bring current DOM state to the new DOM state (reconciliation)
 - Props (properties) are read-only
 - States are local to the component only. But can be passed down to child as props (Top-down data flow)
+- Controlled component: making React state the single source of truth (over HTML form elements e.g. `<input>`)
+- Composition (specialise component using props) is recommended over inheritance (of class component)
 
 Pseudo react element
 ```jsx
