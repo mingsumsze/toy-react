@@ -12,6 +12,7 @@ Wish to experiment with the following:
 - SSR. NextJS
 - Web worker
 - Web assembly
+- WebRTC
 
 In distant future:
 - Electron
