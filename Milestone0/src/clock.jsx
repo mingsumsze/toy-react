@@ -1,7 +1,15 @@
 import React from "react";
+import ClockStyle from "./styles/clock.styled";
+import ThemeContext from "./themeContext";
 
 
 class Clock extends React.Component {
+  // Public class field syntax
+  // Assign a contextType to read the current theme context
+  // Can only subscribe to a single context using this API
+  // If you need to read more than one see Consuming Multiple Contexts
+  static contextType = ThemeContext;
+
   constructor(props) {
     super(props);
     this.state = {
@@ -31,10 +39,9 @@ class Clock extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Hello {this.props.name}</h1>
-        <h2>Time: {this.state.date.toLocaleTimeString()}</h2>
-      </div>
+      <ClockStyle theme={this.context.theme}>
+        <h1>Time: {this.state.date.toLocaleTimeString()}</h1>
+      </ClockStyle>
     );
   }
 }

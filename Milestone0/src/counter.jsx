@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./button";
 
 
 class Counter extends React.Component {
@@ -24,11 +25,10 @@ class Counter extends React.Component {
 
   render() {
     return (
-      <button onClick={this.handleClick}>
-      {/*<button onClick={() => this.handleClick()}>*/}
+      <Button handleClick={this.handleClick}>
         {this.state.count}
-        {this.state.isToggleOn ? 'ON' : 'OFF'}
-      </button>
+        {/* {this.state.isToggleOn ? 'ON' : 'OFF'} */}
+      </Button>
 
       // Parsing arguments to event handler
       // <button onClick={(e) => this.deleteRow(id, e)}>Delete Row</button>

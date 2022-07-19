@@ -1,18 +1,32 @@
 Topics to cover
 - Vite
 - React
+- React router
 - Formik
-- HTML & CSS
+- HTML & CSS (without CSS modules)
 - PNPM
 - Styled component
+- Chakra UI
 - Javascript
+- Typescript
+
+TODO
+- Vite JS dynamic import
+- Figure out internals of Vite (PostCSS, HMR, code splitting, etc)
 
 Resource
 - Vite official docs
 - [Modern JS tutorial](https://javascript.info/)
 - React official docs
-- Styled component official docs
+- Styled component official docs & guide
+  - [Sublime syntax highlighting (CSS-in-JS)](https://styled-components.com/docs/tooling#syntax-highlighting)
+- [ChakraUI docs](https://chakra-ui.com/)
+- [Traversy Media - Styled component](https://www.youtube.com/watch?v=02zO0hZmwnw)
 - [MDN Javscript Ref](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+- [normalize.css](https://github.com/necolas/normalize.css)
+- [Awesome CSS](https://github.com/awesome-css-group/awesome-css)
+- [Awesome UI component lib](https://github.com/anubhavsrivastava/awesome-ui-component-library)
+
 
 ## Vite
 Overview
@@ -404,6 +418,11 @@ function pow(x, n) {
 - States are local to the component only. But can be passed down to child as props (Top-down data flow)
 - Controlled component: making React state the single source of truth (over HTML form elements e.g. `<input>`)
 - Composition (specialise component using props) is recommended over inheritance (of class component)
+- Context: a way to share values between components without having to explicitly pass a prop through every level of the tree
+  - Designed to share "global" data like authentication & theme
+  - When React renders a component that subscribes to this Context object it will read the current context value from the closest matching Provider above it in the tree
+  - All consumers that are descendants of a Provider will re-render whenever the Provider’s value prop changes
+  - Component composition (Combine multi-level components tgt such that higher level component can pass props directly to lower level component, or even higher-level component - passing component as prop) is often a simpler solution than context
 
 Pseudo react element
 ```jsx

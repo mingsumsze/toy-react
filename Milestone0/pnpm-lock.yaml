@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  normalize.css: ^8.0.1
   react: ^18.2.0
   react-dom: ^18.2.0
   react-is: ^18.2.0
@@ -8,6 +9,7 @@ specifiers:
   vite: ^2.9.12
 
 dependencies:
+  normalize.css: 8.0.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-is: 18.2.0
@@ -534,6 +536,10 @@ packages:
     resolution: {integrity: sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
+    dev: false
+
+  /normalize.css/8.0.1:
+    resolution: {integrity: sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==}
     dev: false
 
   /path-parse/1.0.7:

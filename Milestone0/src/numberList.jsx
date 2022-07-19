@@ -1,4 +1,6 @@
 import React from "react";
+import ListStyle from "./styles/list.styled";
+import ThemeContext from "./themeContext";
 
 
 function NumberList(props) {
@@ -12,10 +14,16 @@ function NumberList(props) {
   //   </li>
   // );
   return (
-    <ul>
-      {numbers.map(number =>
-        <li key={number.toString()}>{number}</li>)}
-    </ul>
+    // Context.Consumer (function component only)
+    // Requires a function as a child
+    // The function receives the current context value and returns a React node
+    <ThemeContext.Consumer>
+      {({theme, setTheme}) =>
+        <ListStyle theme={theme}>
+          {numbers.map(number => <li key={number.toString()}>{number}</li>)}
+        </ListStyle>
+      }
+    </ThemeContext.Consumer>
   );
 }
 

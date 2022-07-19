@@ -4,14 +4,22 @@ import { defineConfig } from 'vite'
 // Load environment variable? process.env
 // Async?
 export default defineConfig(({ command, mode }) => {
-  if (command === 'dev') {
-    return {
-      // dev specific config
-    }
-  } else {
-    // command === 'build'
-    return {
-      // build specific config
-    }
+  // if (command === 'dev') {
+  //   // dev specific config
+  // } else {
+  //   // command === 'build'
+  //   return {
+  //     // build specific config
+  //   }
+  // }
+  return {
+    // See how to work with CSS modules
+    // https://github.com/madyankin/postcss-modules
+    // https://www.youtube.com/watch?v=Sgcfiow4fVQ
+    // css: {
+    //   modules: {
+    //     localsConvention: 'camelCase'
+    //   }
+    // }
   }
 })
