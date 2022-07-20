@@ -26,7 +26,7 @@ class Counter extends React.Component {
   render() {
     return (
       <Button handleClick={this.handleClick}>
-        {this.state.count}
+        Counter: {this.state.count}
         {/* {this.state.isToggleOn ? 'ON' : 'OFF'} */}
       </Button>
 

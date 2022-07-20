@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import FormStyle from "./styles/form.styled";
+import ThemeContext from "./themeContext";
 
 
 function Form() {
@@ -21,20 +23,24 @@ function Form() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Name:
-        <input type="text" value={value} onChange={handleChange}/>
-        <input type="text" value={"cannot change"} readOnly/>
-      </label>
-      <select value={value2} onChange={handleChange2}>
-        <option value="grapefruit">Grapefruit</option>
-        <option value="lime">Lime</option>
-        <option value="coconut">Coconut</option>
-        <option value="mango">Mango</option>
-      </select>
-      <button type="submit">Submit</button>
-    </form>
+    <ThemeContext.Consumer>
+      {({contextTheme}) =>
+        <FormStyle onSubmit={handleSubmit} contextTheme={contextTheme}>
+          <label>
+            Name:
+            <input type="text" value={value} onChange={handleChange}/>
+            {/* <input type="text" value={"cannot change"} readOnly/> */}
+          </label>
+          <select value={value2} onChange={handleChange2}>
+            <option value="grapefruit">Grapefruit</option>
+            <option value="lime">Lime</option>
+            <option value="coconut">Coconut</option>
+            <option value="mango">Mango</option>
+          </select>
+          <button type="submit">Submit</button>
+        </FormStyle>
+      }
+    </ThemeContext.Consumer>
   );
 }
 

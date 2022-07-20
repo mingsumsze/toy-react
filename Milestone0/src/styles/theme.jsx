@@ -4,11 +4,9 @@ const Theme = {
     fontLight: '#eef',
     primary: '#37c',
     primaryDark: '#124',
-    primaryLight: '#9ef',
+    primaryLight: '#def',
   },
-  mobile: {
-
-  }
+  mobile: '768px'
 };
 
 export default Theme;

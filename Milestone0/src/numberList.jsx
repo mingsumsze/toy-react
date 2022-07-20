@@ -18,8 +18,8 @@ function NumberList(props) {
     // Requires a function as a child
     // The function receives the current context value and returns a React node
     <ThemeContext.Consumer>
-      {({theme, setTheme}) =>
-        <ListStyle theme={theme}>
+      {({contextTheme}) =>
+        <ListStyle contextTheme={contextTheme}>
           {numbers.map(number => <li key={number.toString()}>{number}</li>)}
         </ListStyle>
       }

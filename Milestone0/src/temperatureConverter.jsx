@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import TemperatureConverterStyle from "./styles/temperatureConverter.styled";
+import ThemeContext from "./themeContext";
 
 
 function toC(temp) {
@@ -107,10 +109,14 @@ class TemperatureInput extends React.Component {
 
   render() {
     return (
-      <fieldset>
-        <legend>Enter temperature in {this.props.scale}:</legend>
-        <input value={this.props.temp} onChange={this.handleChange}/>
-      </fieldset>
+      <ThemeContext.Consumer>
+      {({contextTheme}) =>
+        <TemperatureConverterStyle contextTheme={contextTheme}>
+          <legend>Enter temperature in {this.props.scale}:</legend>
+          <input value={this.props.temp} onChange={this.handleChange}/>
+        </TemperatureConverterStyle>
+      }
+      </ThemeContext.Consumer>
     );
   }
 }

@@ -6,8 +6,8 @@ import ThemeContext from "./themeContext";
 function Button(props) {
   return (
     <ThemeContext.Consumer>
-      {({theme, setTheme}) =>
-        <ButtonStyle onClick={props.handleClick} theme={theme}>
+      {({contextTheme}) =>
+        <ButtonStyle onClick={props.handleClick} contextTheme={contextTheme}>
           {props.children}
         </ButtonStyle>
       }

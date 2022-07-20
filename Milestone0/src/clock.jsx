@@ -39,7 +39,7 @@ class Clock extends React.Component {
 
   render() {
     return (
-      <ClockStyle theme={this.context.theme}>
+      <ClockStyle contextTheme={this.context.contextTheme}>
         <h1>Time: {this.state.date.toLocaleTimeString()}</h1>
       </ClockStyle>
     );

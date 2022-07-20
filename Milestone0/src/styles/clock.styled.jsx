@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 
 const ClockStyle = styled.div`
-  color: ${props => props.theme === 'light' ? '#000' : '#fff'};
-  background-color: ${props => props.theme === 'light' ? '#fff' : '#000'};
+  color: ${({contextTheme, theme}) => contextTheme === 'light' ? theme.colors.fontDark : theme.colors.fontLight};
+  background-color: ${({contextTheme, theme}) => contextTheme === 'light' ? theme.colors.primaryLight : theme.colors.primaryDark};
 `;
 
 export default ClockStyle;

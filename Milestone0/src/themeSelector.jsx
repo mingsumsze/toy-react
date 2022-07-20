@@ -9,19 +9,19 @@ import Theme from "./styles/theme";
 // https://stackoverflow.com/questions/50502664/how-to-update-the-context-value-in-a-provider-from-the-consumer
 function ThemeSelector(props) {
   // useContext hook for Context Provide
-  const { theme, setTheme } = useContext(ThemeContext);
+  const { contextTheme, setContextTheme } = useContext(ThemeContext);
 
   function handleClick() {
-    if (theme === 'light') {
-      setTheme('dark');
+    if (contextTheme === 'light') {
+      setContextTheme('dark');
     } else {
-      setTheme('light');
+      setContextTheme('light');
     }
   }
 
   return (
     <Button handleClick={handleClick}>
-      {theme}
+      Theme: {contextTheme}
     </Button>
   );
 }

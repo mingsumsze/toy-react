@@ -14,28 +14,33 @@ import Theme from "./styles/theme";
 import SuspenseWrapper from "./suspenseWrapper";
 import ThemeContext from "./themeContext";
 import ThemeSelector from "./themeSelector";
+import Flexbox from "./styles/flexbox.styled";
 
 
 function App() {
-  const [theme, setTheme] = useState('light');
+  const [contextTheme, setContextTheme] = useState('light');
 
   return (
     // Wrapper component that provides a theme to all React components (underneath uses the context API)
     <ThemeProvider theme={Theme}>
     {/* Use a Provider to pass the current theme to the tree below. */}
     {/* Any component can read it, no matter how deep it is. */}
-      <ThemeContext.Provider value={{theme, setTheme}}>
-        <GlobalStyle/>
-        <Wrapper>
+      <ThemeContext.Provider value={{contextTheme, setContextTheme}}>
+        <ThemeContext.Consumer>
+          {({contextTheme}) => <GlobalStyle contextTheme={contextTheme}/>}
+        </ThemeContext.Consumer>
+        <Flexbox>
           <Clock/>
-          <Counter/>
           <ThemeSelector/>
+          <Counter/>
+        </Flexbox>
+        <Flexbox>
           <Form/>
-          <WarningBanner warn={true}/>
+          {/* <WarningBanner warn={true}/> */}
           <NumberList numbers={[1, 2, 3, 4, 5]}/>
-          <TemperatureConverter/>
-          {/* <SuspenseWrapper/> */}
-        </Wrapper>
+        </Flexbox>
+        <TemperatureConverter/>
+        {/* <SuspenseWrapper/> */}
       </ThemeContext.Provider>
     </ThemeProvider>
   )
