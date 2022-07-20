@@ -27,8 +27,7 @@ function Form() {
       {({contextTheme}) =>
         <FormStyle onSubmit={handleSubmit} contextTheme={contextTheme}>
           <label>
-            Name:
-            <input type="text" value={value} onChange={handleChange}/>
+            <input type="text" value={value} onChange={handleChange} placeholder="Name"/>
             {/* <input type="text" value={"cannot change"} readOnly/> */}
           </label>
           <select value={value2} onChange={handleChange2}>

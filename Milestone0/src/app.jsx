@@ -39,8 +39,10 @@ function App() {
           {/* <WarningBanner warn={true}/> */}
           <NumberList numbers={[1, 2, 3, 4, 5]}/>
         </Flexbox>
-        <TemperatureConverter/>
-        {/* <SuspenseWrapper/> */}
+        <Flexbox>
+          <TemperatureConverter/>
+          {/* <SuspenseWrapper/> */}
+        </Flexbox>
       </ThemeContext.Provider>
     </ThemeProvider>
   )

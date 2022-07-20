@@ -12,6 +12,7 @@ const ButtonStyle = styled.button`
   font-size: 16px;
   font-weight: 700;
   padding: 15px 60px;
+  margin-bottom: 10px;
   &:hover {
     opacity: 0.9;
     transform: scale(0.98);
